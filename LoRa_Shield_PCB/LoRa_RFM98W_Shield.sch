@@ -20928,7 +20928,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </class>
 <class number="1" name="power" width="0.508" drill="0">
 </class>
-<class number="2" name="RF" width="1.524" drill="0">
+<class number="2" name="RF" width="0.762" drill="0">
 </class>
 </classes>
 <parts>
