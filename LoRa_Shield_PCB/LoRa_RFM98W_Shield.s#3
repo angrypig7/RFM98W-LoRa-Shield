@@ -21765,7 +21765,7 @@ Source: www.kingbright.com</description>
 <part name="JP2" library="pinhead_v2" deviceset="PINHD-1X2" device="/OCT" value="current measurement"/>
 <part name="JP1" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39282/1"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
-<part name="IC3" library="SamacSys_Parts" deviceset="XC6206P332MR" device=""/>
+<part name="U1" library="SamacSys_Parts" deviceset="XC6206P332MR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21875,7 +21875,7 @@ Source: www.kingbright.com</description>
 <attribute name="NAME" x="248.412" y="139.446" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="248.412" y="141.605" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="IC3" gate="G$1" x="152.4" y="139.7" smashed="yes">
+<instance part="U1" gate="G$1" x="152.4" y="139.7" smashed="yes">
 <attribute name="NAME" x="143.51" y="147.32" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="143.51" y="144.78" size="1.778" layer="96" align="center-left"/>
 </instance>
@@ -21912,7 +21912,7 @@ Source: www.kingbright.com</description>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="130.81" x2="171.45" y2="130.81" width="0.1524" layer="91"/>
 <wire x1="171.45" y1="130.81" x2="171.45" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="VSS"/>
+<pinref part="U1" gate="G$1" pin="VSS"/>
 <wire x1="134.62" y1="138.43" x2="138.43" y2="138.43" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -21958,7 +21958,7 @@ Source: www.kingbright.com</description>
 <wire x1="134.62" y1="140.97" x2="134.62" y2="148.59" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="140.97" x2="138.43" y2="140.97" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="G$1" pin="5V"/>
-<pinref part="IC3" gate="G$1" pin="VIN"/>
+<pinref part="U1" gate="G$1" pin="VIN"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="1"/>
@@ -22004,7 +22004,7 @@ Source: www.kingbright.com</description>
 <pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
 <wire x1="167.64" y1="140.97" x2="167.64" y2="148.59" width="0.1524" layer="91"/>
 <junction x="167.64" y="140.97"/>
-<pinref part="IC3" gate="G$1" pin="VOUT"/>
+<pinref part="U1" gate="G$1" pin="VOUT"/>
 </segment>
 <segment>
 <pinref part="SUPPLY6" gate="G$1" pin="3.3V"/>
