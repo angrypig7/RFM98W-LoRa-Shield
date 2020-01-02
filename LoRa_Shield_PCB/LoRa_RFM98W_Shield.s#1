@@ -21142,11 +21142,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="163.83" y="64.135" size="1.778" layer="95"/>
 <attribute name="VALUE" x="163.83" y="48.26" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY12" gate="G$1" x="146.05" y="67.31" smashed="yes">
-<attribute name="VALUE" x="146.05" y="70.104" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY12" gate="G$1" x="142.24" y="67.31" smashed="yes">
+<attribute name="VALUE" x="142.24" y="70.104" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND14" gate="1" x="146.05" y="49.53" smashed="yes">
-<attribute name="VALUE" x="146.05" y="49.276" size="1.778" layer="96" align="top-center"/>
+<instance part="GND14" gate="1" x="142.24" y="49.53" smashed="yes">
+<attribute name="VALUE" x="142.24" y="49.276" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="J1" gate="CON" x="44.45" y="73.66" smashed="yes" rot="R90">
 <attribute name="NAME" x="38.1" y="72.39" size="1.778" layer="95" rot="R90"/>
@@ -21233,8 +21233,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="JP5" gate="A" pin="2"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="167.64" y1="58.42" x2="146.05" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="146.05" y1="58.42" x2="146.05" y2="52.07" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="58.42" x2="142.24" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="58.42" x2="142.24" y2="52.07" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
@@ -21272,8 +21272,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="JP5" gate="A" pin="1"/>
 <pinref part="SUPPLY12" gate="G$1" pin="5V"/>
-<wire x1="167.64" y1="60.96" x2="146.05" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="146.05" y1="60.96" x2="146.05" y2="67.31" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="60.96" x2="142.24" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="60.96" x2="142.24" y2="67.31" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY13" gate="G$1" pin="5V"/>
