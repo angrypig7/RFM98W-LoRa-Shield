@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-01-02T10:51:09Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.5.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "LoRa_RFM98W_Shield"
+        },
+        "Owner": "  <angrypig777@gmail.com>",
+        "Size": {
+            "X": 53.594,
+            "Y": 59.944
+        }
+    }
+}
