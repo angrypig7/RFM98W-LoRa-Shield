@@ -17065,30 +17065,6 @@ Mfr no: 1776244-3 &lt;br&gt;
 <description>&lt;b&gt;https://componentsearchengine.com&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
 <packages>
-<package name="AHT10">
-<description>&lt;b&gt;6 SMD&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-1.6" y="1.27" dx="1.27" dy="1" layer="1"/>
-<smd name="2" x="-1.6" y="0" dx="1.27" dy="1" layer="1"/>
-<smd name="3" x="-1.6" y="-1.27" dx="1.27" dy="1" layer="1"/>
-<smd name="4" x="1.6" y="-1.27" dx="1.27" dy="1" layer="1"/>
-<smd name="5" x="1.6" y="0" dx="1.27" dy="1" layer="1"/>
-<smd name="6" x="1.6" y="1.27" dx="1.27" dy="1" layer="1"/>
-<text x="-2.239" y="2.54" size="1.016" layer="25" ratio="12">&gt;NAME</text>
-<text x="-2.747" y="-3.556" size="1.016" layer="27" ratio="12">&gt;VALUE</text>
-<wire x1="-2" y1="2.5" x2="2" y2="2.5" width="0.2" layer="51"/>
-<wire x1="2" y1="2.5" x2="2" y2="-2.5" width="0.2" layer="51"/>
-<wire x1="2" y1="-2.5" x2="-2" y2="-2.5" width="0.2" layer="51"/>
-<wire x1="-2" y1="-2.5" x2="-2" y2="2.5" width="0.2" layer="51"/>
-<wire x1="-2" y1="2" x2="-2" y2="2.5" width="0.1" layer="21"/>
-<wire x1="-2" y1="2.5" x2="2" y2="2.5" width="0.1" layer="21"/>
-<wire x1="2" y1="2.5" x2="2" y2="2" width="0.1" layer="21"/>
-<wire x1="-2" y1="-2" x2="-2" y2="-2.5" width="0.1" layer="21"/>
-<wire x1="-2" y1="-2.5" x2="2" y2="-2.5" width="0.1" layer="21"/>
-<wire x1="2" y1="-2.5" x2="2" y2="-2" width="0.1" layer="21"/>
-<wire x1="-2.473" y1="2.162" x2="-2.473" y2="2.062" width="0.1" layer="21" curve="180"/>
-<wire x1="-2.473" y1="2.062" x2="-2.473" y2="2.162" width="0.1" layer="21" curve="180"/>
-</package>
 <package name="SOP50P310X90-8N">
 <description>&lt;b&gt;DCU (R-PDSO-G8)&lt;/b&gt;&lt;br&gt;
 </description>
@@ -17141,22 +17117,27 @@ Mfr no: 1776244-3 &lt;br&gt;
 <wire x1="-0.6" y1="-1.45" x2="-0.6" y2="1.45" width="0.2" layer="21"/>
 <wire x1="-1.85" y1="1.5" x2="-0.95" y2="1.5" width="0.2" layer="21"/>
 </package>
+<package name="SON100P300X300X110-7N">
+<description>&lt;b&gt;SHT20&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.45" y="1" dx="0.85" dy="0.45" layer="1"/>
+<smd name="2" x="-1.45" y="0" dx="0.85" dy="0.45" layer="1"/>
+<smd name="3" x="-1.45" y="-1" dx="0.85" dy="0.45" layer="1"/>
+<smd name="4" x="1.45" y="-1" dx="0.85" dy="0.45" layer="1"/>
+<smd name="5" x="1.45" y="0" dx="0.85" dy="0.45" layer="1"/>
+<smd name="6" x="1.45" y="1" dx="0.85" dy="0.45" layer="1"/>
+<smd name="7" x="0" y="0" dx="2.4" dy="1.5" layer="1" rot="R90"/>
+<text x="0" y="3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="2.54" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="0.75" x2="-0.75" y2="1.5" width="0.1" layer="51"/>
+<circle x="-1.875" y="1.725" radius="0.125" width="0.25" layer="25"/>
+</package>
 </packages>
 <symbols>
-<symbol name="AHT10">
-<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
-<text x="-7.62" y="8.636" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="-7.62" y="6.096" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="ADR" x="-12.7" y="2.54" length="middle"/>
-<pin name="SDA" x="-12.7" y="0" length="middle"/>
-<pin name="SCL" x="-12.7" y="-2.54" length="middle"/>
-<pin name="VDD" x="12.7" y="-2.54" length="middle" rot="R180"/>
-<pin name="GND" x="12.7" y="0" length="middle" rot="R180"/>
-<pin name="NC" x="12.7" y="2.54" length="middle" direction="nc" rot="R180"/>
-</symbol>
 <symbol name="TXS0102DCUR">
 <wire x1="-8.89" y1="6.35" x2="8.89" y2="6.35" width="0.254" layer="94"/>
 <wire x1="8.89" y1="-6.35" x2="8.89" y2="6.35" width="0.254" layer="94"/>
@@ -17212,37 +17193,23 @@ Mfr no: 1776244-3 &lt;br&gt;
 <pin name="VOUT" x="13.97" y="1.27" length="middle" direction="out" rot="R180"/>
 <pin name="VIN" x="-13.97" y="1.27" length="middle" direction="in"/>
 </symbol>
+<symbol name="SHT20">
+<wire x1="-10.16" y1="6.35" x2="10.16" y2="6.35" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-8.89" x2="10.16" y2="6.35" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-8.89" x2="-10.16" y2="-8.89" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="6.35" x2="-10.16" y2="-8.89" width="0.254" layer="94"/>
+<text x="-10.16" y="10.16" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="-10.16" y="7.62" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="SDA" x="-15.24" y="3.81" length="middle"/>
+<pin name="VSS" x="15.24" y="3.81" length="middle" rot="R180"/>
+<pin name="NC_1" x="-15.24" y="-1.27" length="middle"/>
+<pin name="EP" x="0" y="-13.97" length="middle" rot="R90"/>
+<pin name="SCL" x="-15.24" y="1.27" length="middle"/>
+<pin name="VDD" x="15.24" y="1.27" length="middle" rot="R180"/>
+<pin name="NC_2" x="15.24" y="-1.27" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="AHT10" prefix="IC">
-<description>&lt;b&gt;AHT10 Integrated temperature and humidity sensor&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/1901291508_Aosong-Guangzhou-Elec-AHT10_C368909.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="AHT10" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="AHT10">
-<connects>
-<connect gate="G$1" pin="ADR" pad="1"/>
-<connect gate="G$1" pin="GND" pad="5"/>
-<connect gate="G$1" pin="NC" pad="6"/>
-<connect gate="G$1" pin="SCL" pad="3"/>
-<connect gate="G$1" pin="SDA" pad="2"/>
-<connect gate="G$1" pin="VDD" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="AHT10 Integrated temperature and humidity sensor" constant="no"/>
-<attribute name="HEIGHT" value="1.7mm" constant="no"/>
-<attribute name="LCSC_PART_NUMBER" value="" constant="no"/>
-<attribute name="LCSC_PRICE-STOCK" value="" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="Aosong (Guangzhou) Elec" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="AHT10" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="TXS0102DCUR" prefix="IC">
 <description>&lt;b&gt;2-Bit Bidirectional Voltage-Level Shifter for Open-Drain and Push-Pull Application&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/Texas-Instruments-TI-TXS0102DCUR_C53434.pdf"&gt; Datasheet &lt;/a&gt;</description>
@@ -17321,6 +17288,36 @@ Source: &lt;a href="http://www.torexsemi.com/products/voltage_regulators/data/XC
 <attribute name="LCSC_PRICE-STOCK" value="" constant="no"/>
 <attribute name="MANUFACTURER_NAME" value="Torex" constant="no"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="XC6206P332MR" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SHT20" prefix="IC">
+<description>&lt;b&gt;Sensirion SHT20, Temperature &amp; Humidity Sensor -40  +125 C +/-3 (Humidity) %RH, +/-3 (Temperature) C&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/Sensirion-SHT20_C53865.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="SHT20" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SON100P300X300X110-7N">
+<connects>
+<connect gate="G$1" pin="EP" pad="7"/>
+<connect gate="G$1" pin="NC_1" pad="3"/>
+<connect gate="G$1" pin="NC_2" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="1"/>
+<connect gate="G$1" pin="VDD" pad="5"/>
+<connect gate="G$1" pin="VSS" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="Sensirion SHT20, Temperature &amp; Humidity Sensor -40  +125 C +/-3 (Humidity) %RH, +/-3 (Temperature) C" constant="no"/>
+<attribute name="HEIGHT" value="1.1mm" constant="no"/>
+<attribute name="LCSC_PART_NUMBER" value="C53865" constant="no"/>
+<attribute name="LCSC_PRICE-STOCK" value="https://lcsc.com/product-detail/Temperature-Humidity-Sensors_Sensirion_SHT20_Sensirion-SHT20_C53865.html" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Sensirion" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="SHT20" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -21723,10 +21720,8 @@ Source: www.kingbright.com</description>
 <part name="X1" library="con-coax" library_urn="urn:adsk.eagle:library:133" deviceset="BU-SMA-H" device="" package3d_urn="urn:adsk.eagle:package:6206/1"/>
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND9" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="IC1" library="SamacSys_Parts" deviceset="AHT10" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
@@ -21766,6 +21761,8 @@ Source: www.kingbright.com</description>
 <part name="JP1" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39282/1"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
 <part name="U1" library="SamacSys_Parts" deviceset="XC6206P332MR" device=""/>
+<part name="IC3" library="SamacSys_Parts" deviceset="SHT20" device=""/>
+<part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -22161,18 +22158,11 @@ Source: www.kingbright.com</description>
 <instance part="GND9" gate="1" x="33.02" y="104.14" smashed="yes">
 <attribute name="VALUE" x="33.02" y="103.886" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="IC1" gate="G$1" x="223.52" y="152.4" smashed="yes">
-<attribute name="NAME" x="215.9" y="161.036" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="215.9" y="158.496" size="1.778" layer="96" align="center-left"/>
-</instance>
 <instance part="GND1" gate="1" x="242.57" y="166.37" smashed="yes" rot="R180">
 <attribute name="VALUE" x="242.57" y="166.624" size="1.778" layer="96" rot="R180" align="top-center"/>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="242.57" y="142.24" smashed="yes" rot="R180">
 <attribute name="VALUE" x="242.57" y="139.446" size="1.778" layer="96" rot="R180" align="bottom-center"/>
-</instance>
-<instance part="GND10" gate="1" x="208.28" y="165.1" smashed="yes" rot="R180">
-<attribute name="VALUE" x="208.28" y="165.354" size="1.778" layer="96" rot="R180" align="top-center"/>
 </instance>
 <instance part="C5" gate="G$1" x="250.19" y="153.67" smashed="yes">
 <attribute name="NAME" x="251.714" y="154.051" size="1.778" layer="95"/>
@@ -22256,6 +22246,13 @@ Source: www.kingbright.com</description>
 <instance part="GND18" gate="1" x="242.57" y="63.5" smashed="yes" rot="R90">
 <attribute name="VALUE" x="242.824" y="63.5" size="1.778" layer="96" rot="R90" align="top-center"/>
 </instance>
+<instance part="IC3" gate="G$1" x="223.52" y="148.59" smashed="yes">
+<attribute name="NAME" x="213.36" y="158.75" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="213.36" y="156.21" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="GND10" gate="1" x="223.52" y="127" smashed="yes">
+<attribute name="VALUE" x="223.52" y="126.746" size="1.778" layer="96" align="top-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -22316,12 +22313,6 @@ Source: www.kingbright.com</description>
 <junction x="35.56" y="52.07"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="ADR"/>
-<wire x1="210.82" y1="154.94" x2="208.28" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="208.28" y1="162.56" x2="208.28" y2="154.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="IC2" gate="G$1" pin="GND"/>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="210.82" y1="96.52" x2="207.01" y2="96.52" width="0.1524" layer="91"/>
@@ -22338,8 +22329,6 @@ Source: www.kingbright.com</description>
 <wire x1="250.19" y1="113.03" x2="250.19" y2="110.49" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="GND"/>
-<wire x1="236.22" y1="152.4" x2="242.57" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="242.57" y1="152.4" x2="242.57" y2="158.75" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="250.19" y1="156.21" x2="250.19" y2="158.75" width="0.1524" layer="91"/>
@@ -22347,6 +22336,8 @@ Source: www.kingbright.com</description>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="242.57" y1="163.83" x2="242.57" y2="158.75" width="0.1524" layer="91"/>
 <junction x="242.57" y="158.75"/>
+<pinref part="IC3" gate="G$1" pin="VSS"/>
+<wire x1="242.57" y1="152.4" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND15" gate="1" pin="GND"/>
@@ -22362,6 +22353,11 @@ Source: www.kingbright.com</description>
 <pinref part="GND18" gate="1" pin="GND"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="240.03" y1="63.5" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="223.52" y1="129.54" x2="223.52" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="EP"/>
 </segment>
 </net>
 <net name="5V" class="1">
@@ -22430,8 +22426,6 @@ Source: www.kingbright.com</description>
 <wire x1="241.3" y1="86.36" x2="248.92" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="VDD"/>
-<wire x1="236.22" y1="149.86" x2="242.57" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="242.57" y1="149.86" x2="242.57" y2="146.05" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="250.19" y1="148.59" x2="250.19" y2="146.05" width="0.1524" layer="91"/>
@@ -22439,6 +22433,8 @@ Source: www.kingbright.com</description>
 <pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
 <wire x1="242.57" y1="142.24" x2="242.57" y2="146.05" width="0.1524" layer="91"/>
 <junction x="242.57" y="146.05"/>
+<pinref part="IC3" gate="G$1" pin="VDD"/>
+<wire x1="238.76" y1="149.86" x2="242.57" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -22698,13 +22694,13 @@ Source: www.kingbright.com</description>
 </net>
 <net name="I2C_SDA_3V3" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SDA"/>
-<wire x1="210.82" y1="152.4" x2="196.85" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="152.4" x2="196.85" y2="152.4" width="0.1524" layer="91"/>
 <label x="193.04" y="152.4" size="1.1684" layer="95" rot="R180" xref="yes"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="196.85" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="196.85" y1="153.67" x2="196.85" y2="152.4" width="0.1524" layer="91"/>
 <junction x="196.85" y="152.4"/>
+<pinref part="IC3" gate="G$1" pin="SDA"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="A1"/>
@@ -22714,13 +22710,13 @@ Source: www.kingbright.com</description>
 </net>
 <net name="I2C_SCL_3V3" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="SCL"/>
-<wire x1="210.82" y1="149.86" x2="201.93" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="149.86" x2="201.93" y2="149.86" width="0.1524" layer="91"/>
 <label x="193.04" y="149.86" size="1.1684" layer="95" rot="R180" xref="yes"/>
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="201.93" y1="149.86" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="201.93" y1="153.67" x2="201.93" y2="149.86" width="0.1524" layer="91"/>
 <junction x="201.93" y="149.86"/>
+<pinref part="IC3" gate="G$1" pin="SCL"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="A2"/>

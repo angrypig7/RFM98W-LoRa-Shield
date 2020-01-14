@@ -21761,7 +21761,8 @@ Source: www.kingbright.com</description>
 <part name="JP1" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39282/1"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
 <part name="U1" library="SamacSys_Parts" deviceset="XC6206P332MR" device=""/>
-<part name="IC3" library="SamacSys_Parts" deviceset="SHT20" device=""/>
+<part name="IC1" library="SamacSys_Parts" deviceset="SHT20" device=""/>
+<part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -22245,9 +22246,12 @@ Source: www.kingbright.com</description>
 <instance part="GND18" gate="1" x="242.57" y="63.5" smashed="yes" rot="R90">
 <attribute name="VALUE" x="242.824" y="63.5" size="1.778" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="IC3" gate="G$1" x="223.52" y="148.59" smashed="yes">
+<instance part="IC1" gate="G$1" x="223.52" y="148.59" smashed="yes">
 <attribute name="NAME" x="213.36" y="158.75" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="213.36" y="156.21" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="GND10" gate="1" x="223.52" y="127" smashed="yes">
+<attribute name="VALUE" x="223.52" y="126.746" size="1.778" layer="96" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -22332,7 +22336,7 @@ Source: www.kingbright.com</description>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="242.57" y1="163.83" x2="242.57" y2="158.75" width="0.1524" layer="91"/>
 <junction x="242.57" y="158.75"/>
-<pinref part="IC3" gate="G$1" pin="VSS"/>
+<pinref part="IC1" gate="G$1" pin="VSS"/>
 <wire x1="242.57" y1="152.4" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -22349,6 +22353,11 @@ Source: www.kingbright.com</description>
 <pinref part="GND18" gate="1" pin="GND"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="240.03" y1="63.5" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="223.52" y1="129.54" x2="223.52" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="EP"/>
 </segment>
 </net>
 <net name="5V" class="1">
@@ -22424,7 +22433,7 @@ Source: www.kingbright.com</description>
 <pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
 <wire x1="242.57" y1="142.24" x2="242.57" y2="146.05" width="0.1524" layer="91"/>
 <junction x="242.57" y="146.05"/>
-<pinref part="IC3" gate="G$1" pin="VDD"/>
+<pinref part="IC1" gate="G$1" pin="VDD"/>
 <wire x1="238.76" y1="149.86" x2="242.57" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -22691,7 +22700,7 @@ Source: www.kingbright.com</description>
 <wire x1="196.85" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="196.85" y1="153.67" x2="196.85" y2="152.4" width="0.1524" layer="91"/>
 <junction x="196.85" y="152.4"/>
-<pinref part="IC3" gate="G$1" pin="SDA"/>
+<pinref part="IC1" gate="G$1" pin="SDA"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="A1"/>
@@ -22707,7 +22716,7 @@ Source: www.kingbright.com</description>
 <wire x1="201.93" y1="149.86" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="201.93" y1="153.67" x2="201.93" y2="149.86" width="0.1524" layer="91"/>
 <junction x="201.93" y="149.86"/>
-<pinref part="IC3" gate="G$1" pin="SCL"/>
+<pinref part="IC1" gate="G$1" pin="SCL"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="A2"/>
