@@ -21671,7 +21671,7 @@ Source: www.kingbright.com</description>
 </libraries>
 <attributes>
 <attribute name="CNAME" value="Arduino Uno LoRa Shield"/>
-<attribute name="CREVISION" value="1.0.0"/>
+<attribute name="CREVISION" value="1.1.0"/>
 </attributes>
 <variantdefs>
 </variantdefs>

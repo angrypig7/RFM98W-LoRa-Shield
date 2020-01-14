@@ -2626,8 +2626,8 @@ design rules under a new name.</description>
 <attribute name="LCSC_PRICE-STOCK" value="https://lcsc.com/product-detail/Temperature-Humidity-Sensors_Sensirion_SHT20_Sensirion-SHT20_C53865.html" x="8.89" y="53.34" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER_NAME" value="Sensirion" x="8.89" y="53.34" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="SHT20" x="8.89" y="53.34" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="11.176" y="54.61" size="1.27" layer="25" rot="R90" align="center"/>
-<attribute name="VALUE" x="5.588" y="52.832" size="1.27" layer="27" rot="R90" align="center"/>
+<attribute name="NAME" x="6.35" y="52.832" size="1.27" layer="25" rot="R90" align="center"/>
+<attribute name="VALUE" x="4.826" y="52.832" size="1.27" layer="27" rot="R90" align="center"/>
 </element>
 </elements>
 <signals>

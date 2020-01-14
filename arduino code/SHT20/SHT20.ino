@@ -1,14 +1,14 @@
 #include <Wire.h>
 #include "DFRobot_SHT20.h"
 
-DFRobot_SHT20    sht20;
+DFRobot_SHT20 sht20;
 
 void setup(){
 	Serial.begin(115200);
 	Serial.println("SHT20 Example!");
-	sht20.initSHT20(); // Init SHT20 Sensor
+	sht20.initSHT20();
 	delay(100);
-	sht20.checkSHT20(); // Check SHT20 Sensor
+	sht20.checkSHT20();
 }
 
 void loop(){
@@ -24,5 +24,6 @@ void loop(){
 	Serial.print(humd, 1);
 	Serial.print("%");
 	Serial.println();
+	
 	delay(1000);
 }
