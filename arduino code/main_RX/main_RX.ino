@@ -72,14 +72,22 @@ void loop(){
       Serial.println(rf95.lastRssi(), DEC);
       
       // Send a reply
-      uint8_t data[] = "Copy";
+      // uint8_t data[] = "Copy";
+      uint8_t data[len] = {0};
+      for(uint8_t i=0; i<len; i++){
+        data[i] = buf[i];
+      }
+      data[len] = 0;
       rf95.send(data, sizeof(data));
       rf95.waitPacketSent();
-      Serial.println("Sent a reply");
+
       digitalWrite(LED, LOW);
+      Serial.println("Sent a reply");
     }
     else{
       Serial.println("Receive failed");
     }
+
+  Serial.println();
   }
 }
