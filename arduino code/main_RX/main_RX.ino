@@ -11,14 +11,14 @@ uint8_t input_voltage_pin = A0;
 uint8_t input_relay_status_pin = A1;
 uint8_t node_select_pin = A3;
 uint8_t node = 0;
+uint16_t packetnum = 0;
 
 RH_RF95 rf95(RFM95_CS, RFM95_INT);
-int16_t packetnum = 0;
 
 void setup(){
   pinMode(input_voltage_pin, INPUT);
   pinMode(input_relay_status_pin, INPUT);
-  pinMode(LED, OUTPUT);     
+  pinMode(LED, OUTPUT);
   pinMode(RFM95_RST, OUTPUT);
   digitalWrite(RFM95_RST, HIGH);
 
@@ -68,11 +68,11 @@ void loop(){
       RH_RF95::printBuffer("Received: ", buf, len);
       Serial.print("Got: ");
       Serial.println((char*)buf);
-       Serial.print("RSSI: ");
+      Serial.print("RSSI: ");
       Serial.println(rf95.lastRssi(), DEC);
       
       // Send a reply
-      uint8_t data[] = "And hello back to you";
+      uint8_t data[] = "Copy";
       rf95.send(data, sizeof(data));
       rf95.waitPacketSent();
       Serial.println("Sent a reply");
