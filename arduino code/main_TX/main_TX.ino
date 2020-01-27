@@ -17,6 +17,7 @@ uint8_t input_relay_status_pin = A1;
 uint8_t node_select_pin = A3;
 uint8_t node = 0;
 uint16_t packetnum = 0;
+uint16_t packet_interval = 5000;  // 5000ms delay
 
 RH_RF95 rf95(RFM95_CS, RFM95_INT);
 DFRobot_SHT20 sht20;
@@ -111,6 +112,7 @@ void loop(){
   oled.print(input_voltage, 1);
   oled.println("V");
 
+  // Transmit
   String radiopacket = "#";
   radiopacket.concat(node);
   radiopacket.concat("#");
@@ -142,10 +144,12 @@ void loop(){
       Serial.print("RSSI: ");
       Serial.println(rf95.lastRssi(), DEC);
 
+      oled.print("Reply: ");
       oled.println((char*)buf);
       oled.print("RSSI:");
       oled.set2X();
-      oled.println(rf95.lastRssi());
+      oled.print(rf95.lastRssi());
+      oled.println("dBm");
       oled.set1X();
     }
     else{
@@ -154,49 +158,10 @@ void loop(){
     }
   }
   else{
-    Serial.println("No reply, is there a listener around?");
-      oled.println("No listener");
+    Serial.println("No ACK, no reponse from gateway?");
+      oled.println("No gateway");
   }
 
-
-  // char radiopacket[] = "#";
-
-  // char radiopacket[20] = "Hello World #      ";
-  // itoa(packetnum++, radiopacket+13, 10);
-  // Serial.print("Packet: "); Serial.println(radiopacket);
-  // radiopacket[19] = 0;
-  
-  // Serial.println("Sending..."); delay(10);
-  // rf95.send((uint8_t *)radiopacket, 20);
-
-  // delay(10);
-  // rf95.waitPacketSent();
-	// Serial.println("Transmission complete");
-  
-
-
-
-	// Wait for a reply
-  // uint8_t buf[RH_RF95_MAX_MESSAGE_LEN];
-  // uint8_t len = sizeof(buf);
-
-  // Serial.println("Waiting for reply..."); delay(10);
-  // if (rf95.waitAvailableTimeout(1000)){ 
-  //   // Should be a reply message for us now   
-  //   if (rf95.recv(buf, &len)){
-  //     Serial.print("Got reply: ");
-  //     Serial.println((char*)buf);
-  //     Serial.print("RSSI: ");
-  //     Serial.println(rf95.lastRssi(), DEC);    
-  //   }
-  //   else{
-  //     Serial.println("Receive failed");
-  //   }
-  // }
-  // else{
-  //   Serial.println("No reply, is there a listener around?");
-  // }
-
   rf95.sleep();
-  delay(2000);
+  delay(packet_interval);
 }
