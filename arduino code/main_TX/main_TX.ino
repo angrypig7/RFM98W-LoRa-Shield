@@ -163,5 +163,6 @@ void loop(){
   }
 
   rf95.sleep();
-  delay(packet_interval);
+  delay(packet_interval-25);
+  delay(random(0, 50));
 }

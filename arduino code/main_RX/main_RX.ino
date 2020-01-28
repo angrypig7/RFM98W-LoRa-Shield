@@ -92,30 +92,35 @@ void loop(){
       String packet = (char*)buf;
       packet.trim();
       if(packet.startsWith("#")){  // 정상적인 패킷
+        packetnum++;
+
         String message = packet.substring(1);
-        Serial.print("    MSG:"); Serial.println(message);
         uint8_t node = message.substring(0,message.indexOf("#")).toInt();
         message = message.substring(message.indexOf("#")+1);
-        Serial.print("    MSG:"); Serial.println(message);
-
         float temp = message.substring(0,message.indexOf("#")).toInt()/10.0;
         message = message.substring(message.indexOf("#")+1);
-        Serial.print("    MSG:"); Serial.println(message);
-
-        float humd = message.substring(0,message.indexOf("#")).toInt();
+        int humd = message.substring(0,message.indexOf("#")).toInt();
         message = message.substring(message.indexOf("#")+1);
-        Serial.print("    MSG:"); Serial.println(message);
         uint8_t relay = message.substring(0,message.indexOf("#")).toInt();
         message = message.substring(message.indexOf("#")+1);
-        Serial.print("    MSG:"); Serial.println(message);
         float voltage = message.substring(0,message.indexOf("#")).toInt()/10.0;
 
+        Serial.print("Packet number: "); Serial.println(packetnum);
         Serial.print("Node: "); Serial.println(node);
-        Serial.print("Temp: "); Serial.println(temp);
+        Serial.print("Temp: "); Serial.println(temp, 1);
         Serial.print("Humd: "); Serial.println(humd);
         Serial.print("Relay: "); Serial.println(relay);
-        Serial.print("Voltage: "); Serial.println(voltage);
+        Serial.print("Voltage: "); Serial.println(voltage, 1);
+        Serial.print("RSSI: "); Serial.print(rf95.lastRssi(), DEC); Serial.println("dBm");
 
+        oled.clear();
+        oled.print("Packet number: "); oled.println(packetnum);
+        oled.print("Node: "); oled.println(node);
+        oled.print("Temp: "); oled.println(temp, 1 );
+        oled.print("Humd: "); oled.println(humd);
+        oled.print("Relay: "); oled.println(relay);
+        oled.print("Voltage: "); oled.println(voltage, 1);
+        oled.print("RSSI: "); oled.print(rf95.lastRssi(), DEC); oled.println("dBm");
 
       }else{  // 비정상적인 패킷 수신
       }
@@ -131,7 +136,7 @@ void loop(){
       rf95.waitPacketSent();
 
       digitalWrite(LED, LOW);
-      Serial.println("Sent a reply");
+      Serial.println("Sent a");
     }
     else{
       Serial.println("Receive failed");
