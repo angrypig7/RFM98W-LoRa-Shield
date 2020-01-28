@@ -4,13 +4,12 @@
 #include "DFRobot_SHT20.h"
 #include "SSD1306Ascii.h"
 #include "SSD1306AsciiWire.h"
-// #include "fonts.h"  //Open_Sans_Hebrew_Condensed_14/18
 
 #define RFM95_CS 10
 #define RFM95_RST 9
 #define RFM95_INT 2
 #define RF95_FREQ 434.0
-#define I2C_ADDRESS 0x3C
+#define I2C_ADDRESS 0x3C  // OLED
 
 uint8_t input_voltage_pin = A0;
 uint8_t input_relay_status_pin = A1;
@@ -37,8 +36,7 @@ void setup(){
 
 // Set Node Number
   pinMode(node_select_pin, INPUT_PULLUP);
-  node = !digitalRead(node_select_pin);  // 0 or 1
-  node++;  // 1 or 2
+  ++node += !digitalRead(node_select_pin);  // 1 or 2
   Serial.print("Node Number: ");
   Serial.println(node);
 
@@ -66,6 +64,7 @@ void setup(){
   digitalWrite(RFM95_RST, HIGH);
   delay(10);
 
+// Init RFM98W
   while (!rf95.init()) {
     Serial.println("LoRa radio init failed");
     while (1);
@@ -144,8 +143,9 @@ void loop(){
       Serial.print("RSSI: ");
       Serial.println(rf95.lastRssi(), DEC);
 
-      oled.print("Reply: ");
-      oled.println((char*)buf);
+      oled.println("Got ACK from gateway");
+      // oled.print("Reply: ");
+      // oled.println((char*)buf);
       oled.print("RSSI:");
       oled.set2X();
       oled.print(rf95.lastRssi());

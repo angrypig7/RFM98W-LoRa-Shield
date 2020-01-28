@@ -1,10 +1,14 @@
 #include <SPI.h>
 #include <RH_RF95.h>
+#include <Wire.h>
+#include "SSD1306Ascii.h"
+#include "SSD1306AsciiWire.h"
 
 #define RFM95_CS 10
 #define RFM95_RST 9
 #define RFM95_INT 2
 #define RF95_FREQ 434.0
+#define I2C_ADDRESS 0x3C
 #define LED LED_BUILTIN
 
 uint8_t input_voltage_pin = A0;
@@ -12,8 +16,11 @@ uint8_t input_relay_status_pin = A1;
 uint8_t node_select_pin = A3;
 uint8_t node = 0;
 uint16_t packetnum = 0;
+String node1 = "";
+String node2 = "";
 
 RH_RF95 rf95(RFM95_CS, RFM95_INT);
+SSD1306AsciiWire oled;
 
 void setup(){
   pinMode(input_voltage_pin, INPUT);
@@ -32,8 +39,17 @@ void setup(){
   pinMode(node_select_pin, INPUT_PULLUP);
   node = !digitalRead(node_select_pin);  // 0 or 1
   node++;  // 1 or 2
-  Serial.print("Node Number: ");
-  Serial.println(node);
+  // Serial.print("Node Number: ");
+  // Serial.println(node);
+
+// OLED display
+  Wire.begin();
+  oled.begin(&Adafruit128x64, I2C_ADDRESS);
+  // oled.set400kHz();
+  oled.setFont(Adafruit5x7);
+
+  oled.clear();
+  oled.println("LoRa Shield RX");
   
 // RFM98W manual reset
   digitalWrite(RFM95_RST, LOW);
@@ -41,7 +57,7 @@ void setup(){
   digitalWrite(RFM95_RST, HIGH);
   delay(10);
 
-// Init SHT20
+// Init RFM98W
   while (!rf95.init()) {
     Serial.println("LoRa radio init failed");
     while (1);
@@ -53,8 +69,10 @@ void setup(){
     while (1);
   }
   rf95.setTxPower(20, false);
-
   Serial.print("Set Freq to: "); Serial.println(RF95_FREQ);
+  Serial.println("LoRa radio init OK");
+
+  delay(1000);
 }
 
 
@@ -65,14 +83,45 @@ void loop(){
     
     if (rf95.recv(buf, &len)){
       digitalWrite(LED, HIGH);
-      RH_RF95::printBuffer("Received: ", buf, len);
-      Serial.print("Got: ");
+      RH_RF95::printBuffer("Received:", buf, len);
+      Serial.print("packet:");
       Serial.println((char*)buf);
       Serial.print("RSSI: ");
       Serial.println(rf95.lastRssi(), DEC);
+
+      String packet = (char*)buf;
+      packet.trim();
+      if(packet.startsWith("#")){  // 정상적인 패킷
+        String message = packet.substring(1);
+        Serial.print("    MSG:"); Serial.println(message);
+        uint8_t node = message.substring(0,message.indexOf("#")).toInt();
+        message = message.substring(message.indexOf("#")+1);
+        Serial.print("    MSG:"); Serial.println(message);
+
+        float temp = message.substring(0,message.indexOf("#")).toInt()/10.0;
+        message = message.substring(message.indexOf("#")+1);
+        Serial.print("    MSG:"); Serial.println(message);
+
+        float humd = message.substring(0,message.indexOf("#")).toInt();
+        message = message.substring(message.indexOf("#")+1);
+        Serial.print("    MSG:"); Serial.println(message);
+        uint8_t relay = message.substring(0,message.indexOf("#")).toInt();
+        message = message.substring(message.indexOf("#")+1);
+        Serial.print("    MSG:"); Serial.println(message);
+        float voltage = message.substring(0,message.indexOf("#")).toInt()/10.0;
+
+        Serial.print("Node: "); Serial.println(node);
+        Serial.print("Temp: "); Serial.println(temp);
+        Serial.print("Humd: "); Serial.println(humd);
+        Serial.print("Relay: "); Serial.println(relay);
+        Serial.print("Voltage: "); Serial.println(voltage);
+
+
+      }else{  // 비정상적인 패킷 수신
+      }
+
       
       // Send a reply
-      // uint8_t data[] = "Copy";
       uint8_t data[len] = {0};
       for(uint8_t i=0; i<len; i++){
         data[i] = buf[i];
