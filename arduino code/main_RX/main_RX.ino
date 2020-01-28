@@ -124,19 +124,6 @@ void loop(){
 
       }else{  // 비정상적인 패킷 수신
       }
-
-      
-      // Send a reply
-      uint8_t data[len] = {0};
-      for(uint8_t i=0; i<len; i++){
-        data[i] = buf[i];
-      }
-      data[len] = 0;
-      rf95.send(data, sizeof(data));
-      rf95.waitPacketSent();
-
-      digitalWrite(LED, LOW);
-      Serial.println("Sent a");
     }
     else{
       Serial.println("Receive failed");

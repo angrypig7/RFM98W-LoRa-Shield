@@ -136,31 +136,6 @@ void loop(){
   uint8_t len = sizeof(buf);
 
   oled.println();
-  if (rf95.waitAvailableTimeout(1000)){
-    if (rf95.recv(buf, &len)){
-      Serial.print("Got reply: ");
-      Serial.println((char*)buf);
-      Serial.print("RSSI: ");
-      Serial.println(rf95.lastRssi(), DEC);
-
-      oled.println("Got ACK from gateway");
-      // oled.print("Reply: ");
-      // oled.println((char*)buf);
-      oled.print("RSSI:");
-      oled.set2X();
-      oled.print(rf95.lastRssi());
-      oled.println("dBm");
-      oled.set1X();
-    }
-    else{
-      Serial.println("Receive failed");
-      oled.println("Receive failed");
-    }
-  }
-  else{
-    Serial.println("No ACK, no reponse from gateway?");
-      oled.println("No gateway");
-  }
 
   rf95.sleep();
   delay(packet_interval-25);
