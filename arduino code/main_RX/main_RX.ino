@@ -4,6 +4,10 @@
 #include "SSD1306Ascii.h"
 #include "SSD1306AsciiWire.h"
 
+#define SF         7
+#define BANDWIDTH  250
+#define TXPOWER    14
+
 #define RFM95_CS 10
 #define RFM95_RST 9
 #define RFM95_INT 2
@@ -68,7 +72,9 @@ void setup(){
     Serial.println("setFrequency failed");
     while (1);
   }
-  rf95.setTxPower(20, false);
+  rf95.setTxPower(TXPOWER, false);
+  rf95.setSpreadingFactor(SF);
+  rf95.setSignalBandwidth(BANDWIDTH);
   Serial.print("Set Freq to: "); Serial.println(RF95_FREQ);
   Serial.println("LoRa radio init OK");
 
